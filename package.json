@@ -1,0 +1,37 @@
+{
+    "name": "wb-tariffs-service",
+    "version": "1.0.0",
+    "description": "Сервис для получения тарифов Wildberries и синхронизации с Google Sheets",
+    "main": "app.js",
+    "type": "module",
+    "scripts": {
+        "dev": "nodemon --watch src --ext ts --exec tsx src/app.ts",
+        "build": "tsc --allowJs",
+        "start": "node dist/app.js"
+    },
+    "imports": {
+        "#*": [
+            "./dist/*",
+            "./src/*"
+        ]
+    },
+    "author": "lucard17",
+    "license": "ISC",
+    "dependencies": {
+        "commander": "^13.1.0",
+        "dotenv": "^16.3.1",
+        "googleapis": "^144.0.0",
+        "knex": "^3.0.1",
+        "log4js": "^6.9.1",
+        "node-cron": "^3.0.3",
+        "pg": "^8.11.3",
+        "zod": "^3.23.8"
+    },
+    "devDependencies": {
+        "@types/node": "^20.0.0",
+        "@types/node-cron": "^3.0.11",
+        "nodemon": "^3.0.2",
+        "tsx": "^4.21.0",
+        "typescript": "^5.7.3"
+    }
+}
